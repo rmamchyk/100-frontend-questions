@@ -2,14 +2,14 @@
 
 <head>
     <script>
-        const user = JSON.stringify({
+        const user = {
             firstName: 'Dylan',
             lastName: 'Israel'
-        });
+        };
 
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', JSON.stringify(user));
 
-        console.log(JSON.parse(localStorage.getItem('user')));
+        console.log(JSON.parse(localStorage.getItem('user')))
     </script>
 </head>
 

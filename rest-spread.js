@@ -1,12 +1,10 @@
-function add (num) {
-  const nums = [1, 2, 3, 4];
-  const user = {
-    ...num
-  };
+function add(...args) {
+  console.log(Array.prototype.slice.call(arguments));
+  console.log(Array.from(arguments));
+
+  const nums = [1, 2, 3, 4, ...args];
+  console.log(args);
   console.log(nums);
-  console.log(num);
 }
 
-add({
-  firstName: 'Dylan'
-});
+add(5, 6, 7, 8);

@@ -8,6 +8,6 @@ const user = {
 console.log(user.firstName + ' ' + user.lastName);
 console.log(user['firstName']);
 
-for (let property in user) {
-  console.log(user[property]);
+for (let prop in user) {
+  console.log(user[prop]);
 }

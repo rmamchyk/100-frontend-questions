@@ -1,9 +1,9 @@
-function example (x) {
+function mul(x) {
   return (y) => {
     return (z) => {
       return x * y * z;
-    };
-  };
+    }
+  }
 }
 
-console.log(example(5)(2)(2));
+console.log(mul(5)(2)(2));

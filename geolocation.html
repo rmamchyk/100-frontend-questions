@@ -2,12 +2,17 @@
 
 <head>
     <script>
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((pos) => {
-                console.log('Got Location', pos);
-            }, () => {
-                console.log('nope')
-            });
+            navigator.geolocation.getCurrentPosition(
+                (pos) => console.log('Got Location: ', pos),
+                () => console.log('nope'),
+                options
+            );
         }
     </script>
 </head>

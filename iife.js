@@ -1,8 +1,8 @@
-const result = (function () {
+const result = (function() {
   const init = {
     id: 0,
     methods: {
-      call () {
+      call() {
 
       }
     }
@@ -12,3 +12,4 @@ const result = (function () {
 })();
 
 console.log(result);
+

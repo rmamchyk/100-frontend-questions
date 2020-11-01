@@ -6,10 +6,11 @@ const user2 = {
   last: 'Israel',
   first: 'Dylan'
 };
-const stringObj1 = JSON.stringify(user1);
-const stringObj2 = JSON.stringify(user2);
 
-function isSameObject (obj1, obj2) {
+console.log(JSON.stringify(user1) === JSON.stringify(user2));
+console.log(user1 === user2);
+
+function isSame(obj1, obj2) {
   const props1 = Object.getOwnPropertyNames(obj1);
   const props2 = Object.getOwnPropertyNames(obj2);
 
@@ -17,10 +18,8 @@ function isSameObject (obj1, obj2) {
     return false;
   }
 
-  for (let i = 0; i < props1.length; i++) {
-    const property = props1[i];
-
-    if (props1[property] !== props2[property]) {
+  for (let prop of props1) {
+    if (obj1[prop] !== obj2[prop]) {
       return false;
     }
   }
@@ -28,9 +27,4 @@ function isSameObject (obj1, obj2) {
   return true;
 }
 
-console.log(isSameObject(user1, user2));
-
-console.log(stringObj1 === stringObj2);
-
-console.log(typeof stringObj1);
-console.log(user1 === user2);
+console.log(isSame(user1, user2));

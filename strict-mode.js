@@ -1,12 +1,12 @@
 'use strict';
 
-x = 10;
+// x = 10;
 const y = 10;
 
-delete y;
+// delete y;
 
-function (param1, param1) {
+// function(param1, param1) {
 
-}
+// }
 
 const z = 010;
